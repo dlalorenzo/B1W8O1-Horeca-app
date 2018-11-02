@@ -1,23 +1,43 @@
+var qtyfris, qtybier, qtywijn
+var qtyfris = 0
+var qtywijn = 0
+var qtybier = 0
+var qtysnacks = 0
 
-const BIER=2,75;
-const WIJN=3,75;
-const FRIS=2;
-const SNACKS=2,50;
+const BIER=2.75
+const WIJN=3.75
+const FRIS=2
+const SNACKS=2.50
 
-var bier,wijn,fris;
-var qeustion='wat wilt u drinken\n1)bier &euro;2,75\n2)wijn &euro;3,75\n3)fris &euro;2';
-var qeustionFood='wil je 8 of 16 stuks bitterbalen';
+    function order(doosje){
+   qtyOrder = prompt("hoeveel " + doosje + ' wilt u bestellen');
+    console.log(naam + qtyOrder);
 
-prompt(qeustion+qeustionFood)
+	    if(doosje = 'fris'){
+	    	frisname = doosje;
+	    	qtyfris = qtyfris + qtyOrder;
 
-if(qeustion == bier){
-	alert('hvl wil je')
+	   }else if(doosje == 'bier'){
+	        biername = doosje;
+	    	qtybier = qtybier + qtyOrder;
 
-}else if(qeustion == wijn){
-	alert('hvl wil je')
+	   }else if(doosje == 'bier'){
+	        wijnname = doosje;
+	    	qtywijn = qtywijn + qtyOrder;
+	      }
+    }
+ question = true; 
+ function start(){
+	  while(question == true){
+	    naam = prompt('welke besteling wilt u toevoegen(bier,wijn,fris)');
+			  if(naam == 'stop'){
+			   	question = false;
+			   	document.write("stop");
+			   	order('price');
+			     }else{
+			  order(naam);
+			         }
+	      }
+   }
+   start();
 
-}else if(qeustion == bier){
-	alert('hvl wil je')
-}else{
-	prompt(qeustion)
-}
