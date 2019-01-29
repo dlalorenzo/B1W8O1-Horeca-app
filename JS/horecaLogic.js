@@ -4,26 +4,30 @@ var qtywijn = 0
 var qtybier = 0
 var qtysnacks = 0
 
-const BIER=2.75
-const WIJN=3.75
-const FRIS=2
-const SNACKS=2.50
+const BIER=250 / 100
+const WIJN=375 / 100
+const FRIS=200 / 100
+const BIT8=450 / 100
+const BIT16=800/ 100
 
-    function order(doosje){
-   qtyOrder = prompt("hoeveel " + doosje + ' wilt u bestellen');
+    function order(menu){
+   qtyOrder = prompt("hoeveel " + menu + ' wilt u bestellen');
     console.log(naam + qtyOrder);
 
-	    if(doosje = 'fris'){
-	    	frisname = doosje;
+	    if(menu = 'fris'){
+	    	frisname = menu;
 	    	qtyfris = qtyfris + qtyOrder;
 
-	   }else if(doosje == 'bier'){
-	        biername = doosje;
+	   }else if(menu == 'bier'){
+	        biername = menu;
 	    	qtybier = qtybier + qtyOrder;
 
-	   }else if(doosje == 'bier'){
-	        wijnname = doosje;
+	   }else if(menu == 'bier'){
+	        wijnname = menu;
 	    	qtywijn = qtywijn + qtyOrder;
+	      }else{
+	      	alert('dit is geen geldige keuzen')
+	      	prompt(qtyOrder)
 	      }
     }
  question = true; 
